@@ -1,9 +1,10 @@
 import React from 'react';
 import NavigrationBar from "./NavigrationBar";
+import { Container } from 'react-bootstrap';
 
 const Header = () => {
     return (
-        <div>
+        <Container>
             <NavigrationBar></NavigrationBar>
             <header className="header">
 
@@ -13,7 +14,7 @@ const Header = () => {
                 <h3 className='text-success'>Bangli Foods</h3>
                 <h5>No matter how you cook, <br />Bangli food has many <br /> the recipes</h5>
             </div>
-        </div>
+        </Container>
     );
 };
 
