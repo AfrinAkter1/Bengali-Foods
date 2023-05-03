@@ -3,11 +3,13 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 
 const NavigrationBar = () => {
     return (
         
+      <Container>
         <Navbar bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#" className='text-success'>Bangli Foods</Navbar.Brand>
@@ -18,17 +20,16 @@ const NavigrationBar = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Blogs</Nav.Link>
-              
+              <Link className='mx-5 text-decoration-none text-black' to='/'>Home</Link>
+              <Link className='text-decoration-none text-black' to='/blogs'>Blogs</Link>
             </Nav>
             
-              <Button variant="outline-success">Login</Button>
+              <Button variant="success"><Link className='text-decoration-none text-white' to='/login'>Login</Link></Button>
             
           </Navbar.Collapse>
         </Container>
       </Navbar>
-     
+      </Container>
     );
 };
 
