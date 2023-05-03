@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const NavigrationBar = () => {
@@ -12,7 +12,7 @@ const NavigrationBar = () => {
       <Container>
         <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#" className='text-success'>Bangli Foods</Navbar.Brand>
+          <Navbar.Brand href="#" className='text-success'>Bengali Foods</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -20,8 +20,14 @@ const NavigrationBar = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Link className='mx-5 text-decoration-none text-black' to='/'>Home</Link>
-              <Link className='text-decoration-none text-black' to='/blogs'>Blogs</Link>
+              <NavLink  className={`mx-5 text-decoration-none `} 
+               to='/' style={({ isActive }) => ({ 
+                color: isActive ? 'red' : 'black' })}>Home</NavLink>
+
+
+              <NavLink className={`text-decoration-none `}
+              to='/blogs' style={({ isActive }) => ({ 
+                color: isActive ? 'red' : 'black' })}>Blogs</NavLink>
             </Nav>
             
               <Button variant="success"><Link className='text-decoration-none text-white' to='/login'>Login</Link></Button>

@@ -24,7 +24,7 @@ const Footer = () => {
             
            </div>
            <div className='bg-success text-center p-3 mt-4'>
-            <p className='text-light'>HEALTHY FAST - BANGLI FOOD, CRAFTED WITH IN MINNEAPOLIS</p>
+            <p className='text-light'>HEALTHY FAST - Bengali FOOD, CRAFTED WITH IN MINNEAPOLIS</p>
            
             <p  className='text-white'><small><FaCopyright></FaCopyright> ALL Rights Reverved</small></p>
            </div>
