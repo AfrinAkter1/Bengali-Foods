@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Blogs from "../pages/Blogs";
 import Login from "../pages/Login";
 import Resister from "../pages/Resister";
+import ErrorPage from "../pages/Shared/ErrorPage";
 
   const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ import Resister from "../pages/Resister";
             {
               path:'/resister',
               element:<Resister></Resister>
+            },
+            {
+              path:'/*',
+              element:<ErrorPage></ErrorPage>
             }
          ]
     }
