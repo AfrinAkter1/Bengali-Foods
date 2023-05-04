@@ -29,7 +29,8 @@ const Chef = () => {
                   Numbers of recepies : {chef.num_recipes} <br />
                   <hr />
                   <p><small><FaRegThumbsUp></FaRegThumbsUp> {chef.likes}</small></p>
-                  <Button variant="success"><Link className='text-decoration-none text-white'>View recepi</Link></Button>
+                  <Button variant="success"><Link to={`/view/${chef.id}`} 
+                  className='text-decoration-none text-white'>View recepi</Link></Button>
                     </div>
                  </div>
                   </div>

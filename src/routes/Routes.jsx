@@ -5,6 +5,7 @@ import Blogs from "../pages/Blogs";
 import Login from "../pages/Login";
 import Resister from "../pages/Resister";
 import ErrorPage from "../pages/Shared/ErrorPage";
+import ViewRecepi from "../pages/ViewRecepi";
 
   const router = createBrowserRouter([
     {
@@ -26,6 +27,11 @@ import ErrorPage from "../pages/Shared/ErrorPage";
             {
               path:'/resister',
               element:<Resister></Resister>
+            },
+            {
+              path:'/view/:id',
+              element:<ViewRecepi></ViewRecepi>,
+              loader:({params}) => fetch(`http://localhost:5000/recepis/${params.id}`)
             },
             {
               path:'/*',
