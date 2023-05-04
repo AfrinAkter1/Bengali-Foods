@@ -29,7 +29,7 @@ const ViewRecepi = () => {
             <section className='row row-cols-1 row-cols-md-3 g-4 my-5'>
                 {
                     recipes.map(rs => <div
-                    key={rs.name}
+                   
                     >
                       <div className='col'>
                     <div className='card p-4'>

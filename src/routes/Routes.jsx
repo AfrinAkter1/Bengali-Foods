@@ -32,7 +32,7 @@ import PrivetRoute from "./PrivetRoute";
             {
               path:'/view/:id',
               element: <PrivetRoute><ViewRecepi></ViewRecepi></PrivetRoute>,
-              loader:({params}) => fetch(`http://localhost:5000/recepis/${params.id}`)
+              loader:({params}) => fetch(`https://assignment10-server-afrinakter1.vercel.app/recepis/${params.id}`)
             },
             {
               path:'/*',
