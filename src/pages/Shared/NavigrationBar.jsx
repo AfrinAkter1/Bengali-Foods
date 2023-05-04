@@ -41,7 +41,7 @@ const NavigrationBar = () => {
             </Nav>
          { user &&  <Tooltip
   placement="bottom"
-  overlay={user.displayName}
+  overlay={user?.displayName}
 >
   <span><FaUserCircle className='mx-3' style={{fontSize:"32px"}}></FaUserCircle></span>
 </Tooltip>}  

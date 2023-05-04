@@ -48,10 +48,14 @@ const logOut = () =>{
     return signOut(auth)
 }
 
-const update = (createUser,name,photo) =>{
-    return updateProfile(createUser,{
+const update = (loggedUser,name,photo) =>{
+    return updateProfile(loggedUser,{
         displayName: name,
         PhotoURL: photo
+    })
+    .then()
+    .catch(error =>{
+        console.log(error)
     })
 }
 

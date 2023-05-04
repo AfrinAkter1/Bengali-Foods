@@ -21,9 +21,9 @@ const Resister = () => {
         console.log(name, email,password,photo)
         createUser(email, password)
         .then(result =>{
-            const createdUser = result.user;
-            console.log(createdUser)
-            update(createUser,name,photo)
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            update(loggedUser,name,photo)
             form.reset();
         })
         .catch(error => {
@@ -36,10 +36,10 @@ const Resister = () => {
             <h3 className='text-success text-center'>Please Register !!!</h3>
             <div className='text-center'>
                 <Form className='my-4' onSubmit={handleResister}>
-                  <Form.Group>
+                  
                   <h6 className='mb-2 ' style={{ marginRight: "100px" }}> Your Name : </h6>
                     <input type="text" className='p-2' placeholder='Enter your name' name='name' required/>
-                  </Form.Group>
+                
                     <h6 className='mb-2 ' style={{ marginRight: "100px" }}> Your Email : </h6>
                     <input type="email" className='p-2' placeholder='Enter your email' name='email' required/>
                     <h6 className='my-2' style={{ marginRight: "100px" }}>Your Password: </h6>

@@ -2,6 +2,7 @@ import React from 'react';
 import NavigrationBar from "./NavigrationBar";
 import { Container } from 'react-bootstrap';
 import Chef from '../Chef';
+import About from '../About';
 
 const Header = () => {
     return (
@@ -16,6 +17,7 @@ const Header = () => {
                 <h5>No matter how you cook, <br />Bengali food has many <br /> the recipes</h5>
             </div>
             <Chef></Chef>
+            <About></About>
         </Container>
     );
 };
