@@ -17,7 +17,7 @@ const Contact = () => {
                  <small>bengali@gmail.com</small>
             </div>
             <div className='p-5 card'>
-                <h3>Get In Touch with <br /> Bengali Foods</h3>
+                <h3>Contact Bengali Foods</h3>
                 <input className='p-2 me-3' placeholder='Your Name' type="text" />
                 <br />
                 <input className='p-2 ' placeholder='Your Email' type="email" /> <br />

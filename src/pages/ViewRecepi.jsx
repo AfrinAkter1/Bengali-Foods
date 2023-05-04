@@ -1,11 +1,16 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ViewRecepi = () => {
     const recepies = useLoaderData()
     console.log(recepies)
     const {id,description,likes,name,num_recipes,picture,recipes,years_of_experience} = recepies;
+    const handleDisable =(event) =>{
+        event.currentTarget.disabled = true;
+        toast('added favourite');
+    }
     return (
         <Container>
             <div className=' mt-5 d-md-flex justify-content-between'>
@@ -35,6 +40,8 @@ const ViewRecepi = () => {
                     }
                    <p><span className='fw-bold my-3'>Method of cooking:</span> {rs.method_of_cooking}</p>
                  
+                    <Button onClick={handleDisable} variant='success'>Favourite</Button>
+                    <Toaster />
                     </div>
                  </div>
                     </div>)
