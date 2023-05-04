@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Resister from "../pages/Resister";
 import ErrorPage from "../pages/Shared/ErrorPage";
 import ViewRecepi from "../pages/ViewRecepi";
+import PrivetRoute from "./PrivetRoute";
 
   const router = createBrowserRouter([
     {
@@ -30,7 +31,7 @@ import ViewRecepi from "../pages/ViewRecepi";
             },
             {
               path:'/view/:id',
-              element:<ViewRecepi></ViewRecepi>,
+              element: <PrivetRoute><ViewRecepi></ViewRecepi></PrivetRoute>,
               loader:({params}) => fetch(`http://localhost:5000/recepis/${params.id}`)
             },
             {

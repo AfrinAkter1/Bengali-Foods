@@ -11,7 +11,12 @@ import "rc-tooltip/assets/bootstrap.css";
 import Tooltip from "rc-tooltip";
 
 const NavigrationBar = () => {
-  const {user} = useContext(AuthContext)
+  const {user, logOut} = useContext(AuthContext)
+  const handleLogOut = () =>{
+    logOut()
+    .then()
+    .catch(error => console.log(error))
+  }
     return (
         
       <Container>
@@ -34,15 +39,23 @@ const NavigrationBar = () => {
               to='/blogs' style={({ isActive }) => ({ 
                 color: isActive ? 'red' : 'black' })}>Blogs</NavLink>
             </Nav>
-            <Tooltip
+         { user &&  <Tooltip
   placement="bottom"
   overlay={user.displayName}
 >
   <span><FaUserCircle className='mx-3' style={{fontSize:"32px"}}></FaUserCircle></span>
-</Tooltip>  
+</Tooltip>}  
             
-              <Button variant="success">
-         <Link className='text-decoration-none text-white' to='/login'>Login</Link></Button>
+            {user ?
+            <Button onClick={handleLogOut} variant="success">
+        <Link className='text-decoration-none text-white' to='/login'>LogOut</Link></Button> :
+        <span>
+           <Button className='mx-3' variant="success">
+        <Link className='text-decoration-none text-white ' to='/login'>Login</Link></Button>
+            <Button variant="success">
+        <Link className='text-decoration-none text-white' to='/resister'>Register</Link></Button>
+        </span>
+           }
             
           </Navbar.Collapse>
         </Container>
