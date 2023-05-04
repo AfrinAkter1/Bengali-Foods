@@ -3,6 +3,7 @@ import NavigrationBar from "./NavigrationBar";
 import { Container } from 'react-bootstrap';
 import Chef from '../Chef';
 import About from '../About';
+import Contact from '../Contact';
 
 const Header = () => {
     return (
@@ -18,6 +19,7 @@ const Header = () => {
             </div>
             <Chef></Chef>
             <About></About>
+            <Contact></Contact>
         </Container>
     );
 };
