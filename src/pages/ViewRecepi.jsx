@@ -33,7 +33,7 @@ const ViewRecepi = () => {
                     >
                       <div className='col'>
                     <div className='card p-4'>
-                        
+                    <img className='w-100' style={{height:"200px"}} src={rs?.img} alt="" />    
                    <span className='fw-bold '> Name: <small>{rs.name} </small></span><br />
                    <span className='fw-bold '> Ingredients:</span>
                     {
