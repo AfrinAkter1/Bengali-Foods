@@ -27,7 +27,7 @@ const Chef = () => {
                             <div className='col'>
                                 <div className='card p-4'>
                                     <LazyLoadImage
-                                        style={{ height: "150px" }}
+                                        style={{ height: "150px" ,width:"300px"}}
                                         className='mb-3'
                                         effect="blur"
                                         src={chef.picture} />

@@ -2,10 +2,11 @@ import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './Provider/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Resister = () => {
     const {createUser, update} = useContext(AuthContext)
-     const [error, setError] = useState("")
+     const [error, setError] = useState("");
   
     const handleResister = (event) =>{
         event.preventDefault()
@@ -15,7 +16,12 @@ const Resister = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photo = form.photo.value;
-        
+        if(password.length < 6){
+            setError('Password have been at least six chars')
+            
+
+            return;
+        }
         
         
         console.log(name, email,password,photo)
@@ -23,12 +29,13 @@ const Resister = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser)
+            toast('Registration successfull');
             update(loggedUser,name,photo)
             form.reset();
         })
         .catch(error => {
             console.log(error.message)
-            setError(error.message)
+            // setError(error.message)
         })
     }
     return (
@@ -53,7 +60,7 @@ const Resister = () => {
                 <p className='text-danger'>{error}</p>
                 <p>You have Already account? <Link to='/login'>Login</Link></p>
             </div>
-
+            <Toaster />
 
         </Container>
     );

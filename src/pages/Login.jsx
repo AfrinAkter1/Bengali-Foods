@@ -3,6 +3,7 @@ import { Button, Container } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import AuthProvider, { AuthContext } from './Provider/AuthProvider';
 
+
 const Login = () => {
     const {signinPassword , signIngoogle, gitHubSignIn} = useContext(AuthContext)
     const [error, setError] = useState("")
@@ -20,6 +21,7 @@ const Login = () => {
             const loggedUser = result.user;
             console.log(loggedUser)
             form.reset();
+           
             navigate(from , {replace: true})
         })
         .catch(error =>{
@@ -36,6 +38,7 @@ const Login = () => {
         signIngoogle()
         .then(result => {
             console.log(result.user)
+            
         })
         .catch(error =>{
             console.log(error.message)
@@ -46,6 +49,7 @@ const Login = () => {
         gitHubSignIn()
         .then(result => {
             console.log(result.user)
+           
         })
         .catch(error => {
             console.log(error.message)

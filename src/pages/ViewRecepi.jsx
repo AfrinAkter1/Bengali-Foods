@@ -2,7 +2,8 @@ import React from 'react';
 import { Button, Container } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
-
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 const ViewRecepi = () => {
     const recepies = useLoaderData()
     console.log(recepies)
@@ -39,7 +40,11 @@ const ViewRecepi = () => {
                         rs.ingredients.map(ing => <p className='my-0'>{ing}</p>)
                     }
                    <p><span className='fw-bold my-3'>Method of cooking:</span> {rs.method_of_cooking}</p>
-                 
+                   <div className='d-flex align-items-center'>
+                   <Rating style={{ maxWidth: 100 }} readOnly />
+
+                  <p className='mb-2 mx-2'>{rs.rating}</p>
+                  </div>
                     <Button onClick={handleDisable} variant='success'>Favourite</Button>
                     <Toaster />
                     </div>
