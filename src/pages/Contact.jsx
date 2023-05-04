@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <Container className=' my-5'>
         <h3 className='text-center text-success my-4'>Contact Us</h3>
-            <div className='d-flex gap-4 justify-content-center'>
+            <div className='d-md-flex gap-4 justify-content-center'>
             <div className='card p-5'>
                 <h3>Bengali Foods Info</h3>
                 <p>Mauris magna sit elementum facilis lacusacphar.</p>
