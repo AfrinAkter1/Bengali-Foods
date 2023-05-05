@@ -12,6 +12,7 @@ const ViewRecepi = () => {
         event.currentTarget.disabled = true;
         toast('added favourite');
     }
+    
     return (
         <Container>
             <div className=' mt-5 d-md-flex justify-content-between'>
@@ -32,7 +33,7 @@ const ViewRecepi = () => {
                    
                     >
                       <div className='col'>
-                    <div className='card p-4'>
+                    <div className='card Regular shadow border border-0 p-4'>
                     <img className='w-100' style={{height:"200px"}} src={rs?.img} alt="" />    
                    <span className='fw-bold '> Name: <small>{rs.name} </small></span><br />
                    <span className='fw-bold '> Ingredients:</span>
@@ -41,11 +42,13 @@ const ViewRecepi = () => {
                     }
                    <p><span className='fw-bold my-3'>Method of cooking:</span> {rs.method_of_cooking}</p>
                    <div className='d-flex align-items-center'>
-                   <Rating style={{ maxWidth: 100 }} readOnly />
+
+                
+                   <Rating style={{ maxWidth: 100 }} value={rs.rating} readOnly />
 
                   <p className='mb-2 mx-2'>{rs.rating}</p>
                   </div>
-                    <Button onClick={handleDisable} variant='success'>Favourite</Button>
+                    <Button onClick={handleDisable} variant='danger'>Favourite</Button>
                     <Toaster />
                     </div>
                  </div>

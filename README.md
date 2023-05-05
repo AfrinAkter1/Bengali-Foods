@@ -1,7 +1,7 @@
 ## Navbar && Footer
 * use navbar and footer section all pages . 
 ## Home Page Banner
-* at first i add a background image with gradient in the banner section .
+* at first i add a background image  .
 * then I added banner title and  a image . 
 ## Extra section 
 * I create two extra section one is category and another is famous food items .

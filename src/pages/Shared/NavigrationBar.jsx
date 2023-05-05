@@ -22,7 +22,7 @@ const NavigrationBar = () => {
       <Container>
         <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#" className='text-success'>Bengali Foods</Navbar.Brand>
+          <Navbar.Brand href="#" className='text-danger'><i>Bengali Foods</i></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -43,16 +43,32 @@ const NavigrationBar = () => {
   placement="bottom"
   overlay={user.displayName}
 >
-  <span><FaUserCircle className='mx-3' style={{fontSize:"32px"}}></FaUserCircle></span>
+  <span>
+    {/* <FaUserCircle className='mx-3' style={{fontSize:"32px"}}></FaUserCircle> */}
+    <img src={user?.photoURL} className='rounded-circle mx-3' style={{height:"40px"}} alt="" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </span>
 </Tooltip>}  
             
             {user ?
-            <Button onClick={handleLogOut} variant="success">
+            <Button onClick={handleLogOut} variant="danger">
         <Link className='text-decoration-none text-white' to='/login'>LogOut</Link></Button> :
         <span>
-           <Button className='mx-3' variant="success">
+           <Button className='mx-3' variant="danger">
         <Link className='text-decoration-none text-white ' to='/login'>Login</Link></Button>
-            <Button variant="success">
+            <Button variant="danger">
         <Link className='text-decoration-none text-white' to='/resister'>Register</Link></Button>
         </span>
            }

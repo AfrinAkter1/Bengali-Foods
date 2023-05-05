@@ -40,7 +40,7 @@ const Resister = () => {
     }
     return (
         <Container className=' my-5'>
-            <h3 className='text-success text-center'>Please Register !!!</h3>
+            <h3 className='text-danger text-center'>Please Register !!!</h3>
             <div className='text-center'>
                 <Form className='my-4' onSubmit={handleResister}>
                   
@@ -52,9 +52,9 @@ const Resister = () => {
                     <h6 className='my-2' style={{ marginRight: "100px" }}>Your Password: </h6>
                     <input type="password" className='p-2' placeholder='Enter  password' name='password' required />
                     <h6 className='my-2' style={{ marginRight: "100px" }}>Your photo url: </h6>
-                    <input type="text" className='p-2' placeholder='Photo url' name='photo' required/>
+                    <input type="url" className='p-2' placeholder='Photo url' name='photo' required/>
                     <br />
-                    <Button className='mt-3' type='submit' variant='success'>Register</Button>
+                    <Button className='mt-3' type='submit' variant='danger'>Register</Button>
                 </Form>
 
                 <p className='text-danger'>{error}</p>

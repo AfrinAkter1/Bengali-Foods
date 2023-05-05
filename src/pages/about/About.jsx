@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-
+import './about.css'
 const About = () => {
     return (
-        <Container className='my-5'>
-            <h2 className='text-success text-center'>About us</h2>
-            <h5 className='text-center my-5'>Traditional & Modern Service <br />
-Since <span className='text-success'>1970</span></h5>
-        <div className='d-flex gap-4'>
+        <Container className='my-5 img-fluid'>
+            <h2 className='text-danger text-center'><i>About us</i></h2>
+            <div className=' back '>
+            <h5 className='text-center my-5 text-white pt-5'>Traditional & Modern Service <br />
+Since 1970</h5>
+        <div className='d-md-flex gap-4 text-white' style={{padding:"40px"}}>
             <div>
                 <p>
                 Cras aliquet dolor sit amet, consectetur adipiscing elit. Placerat pellent esque blandit sodales arcu. Auctor gravida vel et tempus. Malesuada erat dolor magna luctus congue leo tellus mattis. Volutpat neque, erat nis donec sed urna aliquet.
@@ -20,6 +21,7 @@ Since <span className='text-success'>1970</span></h5>
 
 </p>
             </div>
+        </div>
         </div>
         </Container>
     );

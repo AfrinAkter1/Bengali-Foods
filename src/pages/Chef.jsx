@@ -17,7 +17,8 @@ const Chef = () => {
     }, [])
     return (
         <div >
-            <h4 className='text-center mb-4 text-success'>All Chef</h4>
+            
+            <h4 className='text-center mb-4 text-danger'><i>All Chef</i></h4>
             <div className='row row-cols-1 row-cols-md-3 g-4'>
                 {
                     chefs.map(chef => <div
@@ -25,9 +26,9 @@ const Chef = () => {
                     >
                         <div>
                             <div className='col'>
-                                <div className='card p-4'>
+                                <div className='card border border-0 Regular shadow p-4'>
                                     <LazyLoadImage
-                                        style={{ height: "150px" ,width:"300px"}}
+                                        style={{ height: "150px", width: "300px" }}
                                         className='mb-3'
                                         effect="blur"
                                         src={chef.picture} />
@@ -37,7 +38,7 @@ const Chef = () => {
                                     Numbers of recepies : {chef.num_recipes} <br />
                                     <hr />
                                     <p><small><FaRegThumbsUp></FaRegThumbsUp> {chef.likes}</small></p>
-                                    <Button variant="success"><Link to={`/view/${chef.id}`}
+                                    <Button variant="danger"><Link to={`/view/${chef.id}`}
                                         className='text-decoration-none text-white'>View recepi</Link></Button>
                                 </div>
                             </div>

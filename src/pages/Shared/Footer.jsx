@@ -4,7 +4,7 @@ import {  FaFacebook , FaInstagram , FaTwitter, FaCopyright} from 'react-icons/f
 const Footer = () => {
     return (
         <Container className='bg-dark pt-5'>
-           <div className='text-success text-center'>
+           <div className='text-danger text-center'>
            <FaFacebook />
            <FaInstagram className='mx-5'></FaInstagram>
            <FaTwitter></FaTwitter>
@@ -23,7 +23,7 @@ const Footer = () => {
             <small className='mx-3'>Delevery</small>
             
            </div>
-           <div className='bg-success text-center p-3 mt-4'>
+           <div className='bg-danger text-center p-3 mt-4'>
             <p className='text-light'>HEALTHY FAST - Bengali FOOD, CRAFTED WITH IN MINNEAPOLIS</p>
            
             <p  className='text-white'><small><FaCopyright></FaCopyright> ALL Rights Reverved</small></p>
